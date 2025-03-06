@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hofstadter Butterfly</title>
+  <style>
+      body { /*
+        margin: 0px;
+        padding: 0px; 
+        position: relative;*/
+      }
+      canvas {
+        margin: 0.5em;
+        /* padding: 0.5em; */
+      }
+      #rightBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1ex 0 1em;
+  width: 28%;
+  height: 100%;
+  background: #ccffcc;
+}
+  </style>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="hofstadter-butterfly.js"></script>
+</head>
+<body>
+  <canvas id="theCanvas" height="750" width="750"></canvas>
+  <div id="rightBar">
+    <h1>Hofstadter Butterfly</h1>
+    <form>
+        <!--
+    <label for="toolSelect">Tool:</label>
+    <select id="toolSelect">
+      <option selected value="XL">Left-handed cross</option>
+      <option value="XR">Right-handed cross</option>
+      <option value="(">Elbow</option>
+      <option value="U">Trombone</option>
+      <option value="C">Loop</option>
+	  <option value="BV">Vertical break</option>
+	  <option value="BH">Horizontal break</option>
+	  <option value="E">Eraser</option>
+    </select>
+	<br />
+	<br />
+	-->
+	<button id="startButton" onclick="start();"
+		type="button">Start</button>
+	<button id="stopButton" onclick="stop();"
+		type="button">Stop</button>
+		<!--
+	<button id="nextButton" onclick="next();"
+		type="button">Next</button>
+		-->
+	<br />
+	<label for="qValue">q: </label>
+	<span id="qValue"> </span>
+    </form>
+    <p>To learn more about the Butterfly, see <a
+    href="https://en.wikipedia.org/wiki/Hofstadter%27s_butterfly">the
+    Wikipedia article</a>, and <a href="http://www.mathematik.com/Hofstadter/index.html">Dr. Knill's description in terms of a Lyapunov matrix</a>.</p>
+  </div>
+</body>
+</html>
